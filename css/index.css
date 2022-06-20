@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    
+    scroll-behavior: smooth;
+
+}
+
+
+.itens {
+    width: 100%;
+    position: absolute;
+    top: -43%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 8mm;
+    align-items: center;
+    color: white;
+}
+
+.topicos {
+    margin-right: 7%;
+    text-decoration: none;
+    color: #FBBC30;
+}
+
+.logo {
+    background: url(../assets/logo.svg) no-repeat;
+    width: 15%;
+    height: 30%;
+    position: absolute;
+    left: 110px;
+    top: 5%;
+    font-size: 8mm;
+    line-height: 33px;
+    z-index: 2;
+
+    color: #FFFEFE;
+}
+
+.home {
+    width: 98vw;
+    height: 100vh;
+    background: url(../assets/background.svg) no-repeat;
+    background-position-y: center;
+    background-position-x: left;
+}
+
+.titulo {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    left: 10%;
+    top: 60%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12mm;
+    line-height: 62px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: rgba(90, 33, 10, 0.62);
+}
+
+.titulo2 {
+    position: absolute;
+    width: 60%;
+    height: auto;
+    left: 10%;
+    top: 70%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12mm;
+    line-height: 55px;
+    text-transform: uppercase;
+
+    color: #FFFEFE;
+}
+
+.pao {
+    width: 54%;
+    height: 69%;
+    background: url(../assets/BreadMain\ screenpao.svg) no-repeat;
+    background-position-y: center;
+    background-position-x: left;
+    background-size: cover no-repeat;
+    z-index: 4;
+    position: absolute;
+    left: 45%;
+    top: 15%;
+    filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.25));
+}
+
+.historia {
+    width: auto;
+    height: 100vh;
+    background: url(../assets/Intersectfundo.svg) no-repeat;
+    background-size: cover;
+}
+
+.opacidade {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #DBA0467a 0%, #f3ad457a 22.4%, rgba(243, 174, 69, 0.46) 100%);
+    /* opacity: 0.5; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.linha {
+    background: url(../assets/Central\ linelinha.svg) no-repeat;
+    position: absolute;
+    width: 2px;
+    height: 90%;
+    left: 50%;
+    top: 106%;
+}
+
+.caixa1 {
+    margin-top: -5%;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 10mm;
+}
+
+.caixa2 {
+    margin-top: 5%;
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 10mm;
+}
+
+.pao1 {
+    background: url(../assets/bread1bread1.svg) no-repeat;
+    position: absolute;
+    width: 20.5%;
+    height: 33.5%;
+    left: 15%;
+    top: 106%;
+}
+
+.produtos {
+    width: 98.9vw;
+    height: 148vh;
+    background: #FBBC30;
+}
+
+#forma1 {
+    width: 100%;
+    height: 77%;
+    background: url(../assets/Vector\ 2forma1.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0px;
+    top: 218%;
+}
+
+#forma2 {
+    width: 100%;
+    height: 77%;
+    background: url(../assets/Vector\ 3forma2.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0px;
+    top: 291%;
+}
+
+.titulo_produtos {
+    font-size: 14mm;
+    color: white;
+    font-weight: 400;
+    font-family: 'Roboto', serif;
+    position: absolute;
+    top: 210%;
+    left: 32%;
+}
+
+#produto1 {
+    background: url(../assets/bread\ itemprodutos.svg) no-repeat;
+    position: absolute;
+    width: 27%;
+    height: 39%;
+    left: 13%;
+    top: 236%;
+}
+
+#produto2 {
+    background: url(../assets/crousants\ itemprodutos.svg) no-repeat;
+    position: absolute;
+    width: 29%;
+    height: 53%;
+    left: 55%;
+    top: 224%;
+}
+
+#produto3 {
+    background: url(../assets/cakes\ itemprodutos.svg) no-repeat;
+    position: absolute;
+    width: 19.5%;
+    height: 35%;
+    left: 13%;
+    top: 320%;
+}
+
+#produto4 {
+    background: url(../assets/pies\ itemprodutos.svg) no-repeat;
+    position: absolute;
+    width: 26%;
+    height: 40%;
+    left: 57%;
+    top: 310%;
+}
+
+.compra {
+    width: 98.9vw;
+    height: 100vh;
+    background: url(../assets/foto_compra.svg) no-repeat;
+}
+
+.titulo_compra {
+    font-size: 14mm;
+    color: white;
+    font-weight: 400;
+    font-family: 'Roboto', serif;
+    text-align: center;
+    margin-top: 16%;
+}
+
+.opacidade2 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #DBA0467a 0%, #f3ad457a 22.4%, rgba(243, 174, 69, 0.46) 100%);
+    /* opacity: 0.5; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#botao {
+    text-align: center;
+    width: 12vw;
+    height: 7vh;
+    background-color: #FBBC30;
+    border-radius: 18px;
+    border: 0px solid red;
+    color: white;
+    font-weight: 400;
+    font-size: 5mm;
+    cursor: pointer;
+}
+

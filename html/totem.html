@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/totem.css">
+    <title>Totem</title>
+</head>
+
+<body style="display: flex; flex-direction: row;">
+    <div class="main" id="main2">
+        <div class="metricsTotem">
+            <img style="margin-top: 1%;" src="../assets/logo.svg" alt="">
+
+            <div class="columnMetrics">
+                <h4 style="color: #FBBC30;">8</h4>
+                <h4>Total Itens</h4>
+            </div>
+
+            <div class="columnMetrics">
+                <h4 style="color: #FBBC30;">4</h4>
+                <h4>Categorias</h4>
+            </div>
+
+            <div class="columnMetrics">
+                <h4 style="color: #FBBC30;">2</h4>
+                <h4>Bebidas</h4>
+            </div>
+        </div>
+
+        <div class="mainCard">
+            <div class="card" onclick="productPao()" id="cards">
+                <img src="../assets/paoFrances.svg" style="margin-bottom: 16%;" alt="">
+                <h4 style="color: #000;">Pães</h4>
+            </div>
+
+            <div class="card" onclick="productLeite()" id="cards2">
+                <img src="../assets/leite.svg" alt="">
+                <h4 style="color: #000;">Bebidas</h4>
+            </div>
+
+            <div class="card" onclick="productSalgado()" id="cards3">
+                <img src="../assets/coxinha.svg" style="margin-bottom: 8%;" alt="">
+                <h4 style="color: #000;">Salgados</h4>
+            </div>
+
+            <div class="card" onclick="productBolo()" id="cards4">
+                <img src="../assets/boloChocolate.svg" style="margin-bottom: 22%;" alt="">
+                <h4 style="color: #000;">Bolos</h4>
+            </div>
+        </div>
+
+        <h1 style="margin-left: 10%; margin-top: 8%; margin-bottom: 6%; display: none;" id="titleProduct">Pães</h1>
+
+        <div class="rowProducts">
+            <div class="products" id="paoProducts">
+                <img id="imgProducts" src="../assets/paoFrances.svg" alt="">
+                <h4 id="subtitleProduct" style="color: #000; margin-bottom: 4%;"></h4>
+                <div class="lineRow">
+                    <h5 id="descProduct"></h5>
+                    <h5 id="descProduct2"></h5>
+                </div>
+                <div class="rowProducts2">
+                    <div style="display: flex; flex-direction: row;">
+                        <h4 style="color: #000;">R$</h4>
+                        <h4 id="valorProduct" style="color: #000"></h4>
+                    </div>
+                    <button onclick="addProduct()" class="addProducts">+</button>
+                </div>
+            </div>
+
+            <div class="products" id="paoProducts2">
+                <img id="imgProducts2" src="../assets/paoForma.svg" alt="">
+                <h4 id="subtitleProduct2" style="color: #000; margin-bottom: 4%;"></h4>
+                <div class="lineRow">
+                    <h5 id="descProduct3"></h5>
+                    <h5 id="descProduct4"></h5>
+                </div>
+                <div class="rowProducts2">
+                    <div style="display: flex; flex-direction: row;">
+                        <h4 style="color: #000;">R$</h4>
+                        <h4 id="valorProduct2" style="color: #000;"></h4>
+                    </div>
+                    <button onclick="addProduct2()" class="addProducts">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="sideBar" id="sidebar2">
+        <div class="carrinho">
+            <h4 style="color: #000;">Meu Carrinho</h4>
+        </div>
+        <div id="lista_produtos" class="style_lista_produtos">
+            <!-- <div class="iten_lista_produtos">
+                <span><b>Pão Francês</b></span> <span><b class="amarelo">R$ 0.50</b></span>
+            </div>
+            <div class="iten_lista_produtos">
+                <span><b>Pão Francês</b></span> <span><b class="amarelo">R$ 0.50</b></span>
+            </div> -->
+        </div>
+        <div class="div_valor_pedido">
+            <div class="valores_compra">
+                <span>Sub Total:</span>
+                <span>R$ <span id="subTotal"></span></span>
+            </div>
+            <div class="valores_compra">
+                <span>Desconto:</span>
+                <span class="verde">
+                    <span id="desconto">10</span>%
+                </span>
+            </div>
+            <div class="valores_compra">
+                <span>
+                    <b>
+                        Total Liquido:
+                    </b>
+                </span>
+                <span class="amarelo">
+                    <b>
+                        R$ <span id="totalLiquido">0</span>
+                    </b>
+                </span>
+            </div>
+        </div>
+        <div>
+            <div class="formaPagamento">
+                <span class="spanDebito" onclick="debito()" id="debito2">Débito</span>
+                <span class="spanCredito" onclick="credito()" id="credito2">Crédito</span>
+            </div>
+            <div style="display: flex; align-items: center; flex-direction: column;">
+                <button class="confirmar_pagamento2" onclick="deleteProduct()" id="compraFinalizada2"><b>Limpar
+                        Carrinho</b></button>
+                <button class="confirmar_pagamento" onclick="finalizar()" id="compraFinalizada"><b>Finalizar
+                        Compra</b></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container header" style="display: none;" id="container">
+        <div class="header">
+            <div id="header_parte1">
+                <img src="../assets/logo.svg" alt="logoPadaria" width="200px">
+                <a id="btn_voltar" onclick="btnVoltar()">Voltar</a>
+            </div>
+
+            <div class="consultas">
+                <button id="btn_vendas" class="btn" onclick="mostrarVendas()">
+                    <img src="../assets/favicon/moedas.png">
+                    <span>Vendas</span>
+                </button>
+                <button id="btn_saldo_dia" class="btn" onclick="mostrarSaldo()">
+                    <img src="../assets/favicon/bolsa_moeda.png">
+                    <span>Saldo do dia</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container conteudo" style="display: none;" id="container2">
+        <div class="label" style="color: #000;" id="labelId">
+            <div id="label1">Valor:</div>
+            <div id="label2">Forma de Pagamento:</div>
+
+        </div>
+    </div>
+
+    <div class="container conteudo" style="display: none;" id="container3">
+        <!-- <div class="caixaVendas">
+            <h6><span>Total da Venda: R$ </span>300.00</h6>
+            <h6 style="margin-right: 15%;">Debito</h6>
+            <div class="alignNameItens" id="itensProdutos">
+                <h6>Pao queijo</h6>
+                <h6>Pao queijo</h6>
+                <h6>Bolo de Morango</h6
+            </div>
+        </div> -->
+    </div>
+
+
+    <div class="container conteudo" style="display: none;" id="container4">
+        <!-- <div class="caixaSaldo" id="saldoCaixa">
+            <h1 style="color: #fff;">R$ 300.00</h1>
+            <div class="alignNameItens" id="itensProdutos">
+                <h1 style="color: #fff;">pao de queijo</h1>
+                <h1 style="color: #fff;">pao de queijo</h1>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- <div id="caixa_saldo_dia" style="display: none">
+                <div id="titulo_saldo_dia">Saldo de vendas do dia:</div>
+                <div id="div_saldo">R$ 4500.00</div>
+        </div> -->
+
+
+</body>
+
+</html>
+
+<script>
+    function productPao() {
+        cards.style.backgroundColor = `#FBBC30`
+        cards2.style.backgroundColor = `#fff`
+        cards3.style.backgroundColor = `#fff`
+        cards4.style.backgroundColor = `#fff`
+        titleProduct.innerHTML = `Pães`
+        titleProduct.style.display = 'flex'
+        paoProducts.style.display = 'flex'
+        paoProducts2.style.display = 'flex'
+        imgProducts.src = `../assets/paoFrances.svg`
+        imgProducts2.src = `../assets/paoForma.svg`
+        subtitleProduct.innerHTML = 'Pão francês'
+        subtitleProduct2.innerHTML = 'Pão de forma'
+        descProduct.innerHTML = `310 calorias`
+        descProduct2.innerHTML = `100 gramas`
+        valorProduct.innerHTML = `1.40`
+        descProduct3.innerHTML = `500 calorias`
+        descProduct4.innerHTML = `400 gramas`
+        valorProduct2.innerHTML = `16.00`
+    }
+    function productLeite() {
+        cards.style.backgroundColor = `#fff`
+        cards2.style.backgroundColor = `#FBBC30`
+        cards3.style.backgroundColor = `#fff`
+        cards4.style.backgroundColor = `#fff`
+        titleProduct.style.display = 'flex'
+        paoProducts.style.display = 'flex'
+        paoProducts2.style.display = 'flex'
+        titleProduct.innerHTML = `Bebidas`
+        imgProducts.src = `../assets/cafe.svg`
+        imgProducts2.src = `../assets/leite.svg`
+        subtitleProduct.innerHTML = 'Café'
+        subtitleProduct2.innerHTML = 'Leite'
+        descProduct.innerHTML = '120 Calorias'
+        descProduct2.innerHTML = '300 ML'
+        valorProduct.innerHTML = '18.00'
+        descProduct3.innerHTML = '120 Calorias'
+        descProduct4.innerHTML = '300 ML'
+        valorProduct2.innerHTML = '10.00'
+    }
+    function productSalgado() {
+        cards.style.backgroundColor = `#fff`
+        cards2.style.backgroundColor = `#fff`
+        cards3.style.backgroundColor = `#FBBC30`
+        cards4.style.backgroundColor = `#fff`
+        titleProduct.style.display = 'flex'
+        paoProducts.style.display = 'flex'
+        paoProducts2.style.display = 'flex'
+        titleProduct.innerHTML = `Salgados`
+        imgProducts.src = `../assets/coxinha.svg`
+        imgProducts2.src = `../assets/paoQueijo.svg`
+        subtitleProduct.innerHTML = 'Coxinha'
+        subtitleProduct2.innerHTML = 'Pão de queijo'
+        descProduct.innerHTML = `600 calorias`
+        descProduct2.innerHTML = `500 gramas`
+        valorProduct.innerHTML = `11.00`
+        descProduct3.innerHTML = `1050 calorias`
+        descProduct4.innerHTML = `800 gramas`
+        valorProduct2.innerHTML = `14.00`
+    }
+    function productBolo() {
+        cards.style.backgroundColor = `#fff`
+        cards2.style.backgroundColor = `#fff`
+        cards3.style.backgroundColor = `#fff`
+        cards4.style.backgroundColor = `#FBBC30`
+        titleProduct.style.display = 'flex'
+        paoProducts.style.display = 'flex'
+        paoProducts2.style.display = 'flex'
+        titleProduct.innerHTML = `Bolos`
+        imgProducts.src = `../assets/boloChocolate.svg`
+        imgProducts2.src = `../assets/boloMorango.svg`
+        subtitleProduct.innerHTML = 'Bolo de Chocolate'
+        subtitleProduct2.innerHTML = 'Bolo de Morango'
+        descProduct.innerHTML = '900 Calorias'
+        descProduct2.innerHTML = '600 gramas'
+        valorProduct.innerHTML = '15.00'
+        descProduct3.innerHTML = '5900 Calorias'
+        descProduct4.innerHTML = '5400 gramas'
+        valorProduct2.innerHTML = '70.00'
+    }
+
+    saldoTotal = 0
+    subTotal.innerHTML = 0
+    desconto.innerHTML = 0
+    totalLiquido.innerHTML = 0
+
+
+
+
+    var vendas = {
+        produtos: [],
+        formaPagamento: [],
+        totalLiquido2: [],
+    }
+    var padaria = {
+        saldoAtual: this.soma,
+        nomeConta: '4764',
+        cnpj: '422.888.002-41',
+        endereco: '1234',
+        soma: function (sum) {
+            var sum = 0;
+            for (let i = 0; i < vendas.totalLiquido2.length; i++) {
+                sum += Number(vendas.totalLiquido2[i]);
+            }
+            return sum;
+        },
+    }
+
+
+    function addProduct() {
+        lista_produtos.innerHTML += `
+        <div class="iten_lista_produtos">
+        <span><b>${subtitleProduct.innerHTML}</b></span> <span><b class="amarelo">R$${valorProduct.innerHTML}</b></span>
+        
+        </div>`
+        saldoTotal += Number(valorProduct.innerHTML)
+        subTotal.innerHTML = saldoTotal.toFixed(2)
+        desconto.innerHTML = 10
+        var descontoCompra = Number(subTotal.innerHTML) - (saldoTotal * 0.10)
+        totalLiquido.innerHTML = descontoCompra.toFixed(2)
+
+        vendas.produtos.push(subtitleProduct.innerHTML)
+    }
+
+    function addProduct2() {
+        lista_produtos.innerHTML += `
+        <div class="iten_lista_produtos" id="idListaProdutos">
+        <span><b>${subtitleProduct2.innerHTML}</b></span> <span><b class="amarelo">R$${valorProduct2.innerHTML}</b></span>
+    
+        </div>`
+
+        saldoTotal += Number(valorProduct2.innerHTML)
+        subTotal.innerHTML = saldoTotal.toFixed(2)
+        desconto.innerHTML = 10
+        var descontoCompra = Number(subTotal.innerHTML) - (saldoTotal * 0.10)
+        totalLiquido.innerHTML = descontoCompra.toFixed(2)
+
+        vendas.produtos.push(subtitleProduct2.innerHTML)
+    }
+    function deleteProduct() {
+        lista_produtos.innerHTML = ``
+        subTotal.innerHTML = 0
+        desconto.innerHTML = 0
+        totalLiquido.innerHTML = 0
+        vendas.produtos.length = 0
+    }
+
+    function debito() {
+        debito2.style.backgroundColor = `#000`
+        debito2.style.color = `#fff`
+        credito2.style.backgroundColor = `#fff`
+        credito2.style.color = `#000`
+        credito2.innerHTML = "Crédito"
+        debito2.innerHTML = "Débito &#10004;"
+        vendas.formaPagamento.push("Débito")
+    }
+    function credito() {
+        credito2.style.backgroundColor = `#000`
+        credito2.style.color = `#fff`
+        debito2.style.backgroundColor = `#fff`
+        debito2.style.color = `#000`
+        debito2.innerHTML = "Débito"
+        credito2.innerHTML = "Credito &#10004;"
+        vendas.formaPagamento.push("Crédito")
+    }
+    function finalizar() {
+        vendas.totalLiquido2.push(totalLiquido.innerHTML)
+        compraFinalizada.style.backgroundColor = `#09B530`
+        main2.style.display = `none`
+        sidebar2.style.display = `none`
+        container.style.display = `flex`
+        container2.style.display = `flex`
+        container3.style.display = `flex`
+        document.body.style.flexDirection = `column`
+    }
+    function mostrarVendas() {
+        listarExtrato()
+        container4.style.display = `none`
+        labelId.style.display = `flex`
+        label1.innerHTML = `Valor da venda: `
+        label2.innerHTML = `Forma de Pagamento:`
+        container3.style.display = `flex`
+    }
+    function mostrarSaldo() {
+        listarSaldo()
+        container3.style.display = `none`
+        labelId.style.display = `flex`
+        label1.innerHTML = `Valor Total: `
+        label2.innerHTML = `Produtos vendidos:`
+        container4.style.display = `flex`
+    }
+    function btnVoltar() {
+        main2.style.display = ``
+        sidebar2.style.display = ``
+        saldoCaixa.style.display = `none`
+        container.style.display = `none`
+        container2.style.display = `none`
+        container3.style.display = `none`
+        container4.style.display = `none`
+        document.body.style.flexDirection = `row`
+        lista_produtos.innerHTML = ``
+        saldoTotal = 0
+        subTotal.innerHTML = 0
+        desconto.innerHTML = 0
+        totalLiquido.innerHTML = 0
+        cards.style.backgroundColor = `#F9F2E4`
+        cards2.style.backgroundColor = `#F9F2E4`
+        cards3.style.backgroundColor = `#F9F2E4`
+        cards4.style.backgroundColor = `#F9F2E4`
+        debito2.innerHTML = "Débito"
+        credito2.innerHTML = "Crédito"
+        credito2.style.backgroundColor = `#fff`
+        credito2.style.color = `#000`
+        debito2.style.backgroundColor = `#fff`
+        debito2.style.color = `#000`
+    }
+
+
+    function listarExtrato() {
+
+        container3.innerHTML = ``
+
+        for (var i = 0; i < vendas.totalLiquido2.length; i++) {
+            container3.innerHTML += `
+            <div class="caixaVendas" id="caixaVendasId">
+            <h6><span>Total da Venda: R$ </span>${vendas.totalLiquido2[i]}</h6>
+            <h6 style="margin-right: 15%;">${vendas.formaPagamento[i]}</h6>
+             
+        </div > `
+
+            // var x = document.getElementById(`itensProdutos${count}`)
+            //     for (var y = 0; y < vendas.produtos.length; y++) {
+            //         x.innerHTML += `
+            //      <h6>${vendas.produtos[y]}</h6>
+            //     `
+            //     }
+            //      for (let j = vendas.produtos.length; j < `itensProdutos${count}`; j++) {
+            //          vendas.produtos.shift();
+            //       }
+            //     count++
+            // }
+            //  alert(`itensProdutos${count}`)
+        }
+    }
+    var count = 0
+    function listarSaldo() {
+
+
+        container4.innerHTML = ``
+        for (var i = 0; i < vendas.totalLiquido2.length; i++) {
+            container4.innerHTML = `
+            <div class="caixaSaldo" id="saldoCaixa">
+            <h1 style="color: #fff;"><span>R$</span>${padaria.soma().toFixed(2)}</h1>
+            <div class="alignNameItens" id="itensProdutos${count}">
+               
+            </div>
+        </div> `
+            var x = document.getElementById(`itensProdutos${count}`)
+            for (var y = 0; y < vendas.produtos.length; y++) {
+                x.innerHTML += `
+            <h1 style="color: #fff;">${vendas.produtos[y]}</h1>
+            `
+            }
+        }
+        count++
+    }
+
+</script>

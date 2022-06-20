@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #DBA046;
+    font-family: sans-serif;
+}
+
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.container.header {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    width: 80%;
+}
+
+.header {
+    /* border: 2px solid green; */
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #5A210A;
+    font-size: larger;
+    padding: 1%;
+    color: white;
+    cursor: pointer;
+    width: 135px;
+}
+
+.btn:hover {
+    transition: 0.5s;
+    background-color: #bb4213;
+}
+
+/* img {
+    border: 2px solid blue;
+} */
+
+.container.conteudo {
+    display: flex;
+    width: 80%;
+    /* border: 2px solid blueviolet; */
+    margin-top: 2vh;
+    justify-content: center;
+    color: white;
+}
+
+.caixa {
+    display: flex;
+    /* justify-content: center; */
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #5A210A;
+    height: 70vh;
+    overflow-y: scroll;
+    max-height: 70vh;
+    width: 87%;
+}
+
+.caixa::-webkit-scrollbar {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.caixa::-webkit-scrollbar-thumb {
+    background-color: #bb4213;
+    border-radius: 10px;
+}
+
+#caixa_vendas {
+    width: 100%;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+#titulo_vendas {
+    display: flex;
+    margin-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: larger;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#div_vendas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#compra {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#borda {
+    width: 90%;
+    border-bottom: white solid 3px;
+    margin-bottom: 2vh;
+}
+
+#caixa_saldo_dia {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+#titulo_saldo_dia {
+    font-size: 40px;
+    padding-bottom: 50px;
+}
+
+#div_saldo {
+    width: 40%;
+    font-size: 40px;
+    border-bottom: 4px solid white;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    max-width: 25%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    /* overflow-wrap: break-word; */
+}

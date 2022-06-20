@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="caixa_style.css">
+    <title>Padaria</title>
+</head>
+
+<body>
+    <div class="container header">
+        <div class="header">
+            <div id="header_parte1">
+                <img src="./favicon/logopadaria_sem_fundo.png" width="100px">
+                <a id="btn_voltar">Voltar</a>
+            </div>
+
+            <div class="consultas">
+                <button id="btn_vendas" class="btn" onclick="mostrarVendas()">
+                    <img src="favicon/moedas.png">
+                    <span>Vendas</span>
+                </button>
+                <button id="btn_saldo_dia" class="btn" onclick="mostrarSaldo()">
+                    <img src="favicon/bolsa_moeda.png">
+                    <span>Saldo do dia</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container conteudo">
+        <div class="caixaVendas">
+            <div>Valor:</div>
+            <div>Forma de Pagamento:</div>
+            <div>Produtos:</div>
+        </div>
+    </div>
+    <div class="container conteudo">
+        <div class="caixaVendas">
+            <h6><span>Total da Venda: R$ </span>300.00</h6>
+            <h6 style="margin-right: 15%;">Debito</h6>
+            <div class="alignNameItens">
+                <h6>Pao queijo</h6>
+                <h6>Pao queijo</h6>
+                <h6>Bolo de Morango</h6>
+                <h6>Bolo de Chocolate</h6>
+                <h6>Cafê</h6>
+                <h6>Leite</h6>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="caixa_saldo_dia" style="display: none">
+                <div id="titulo_saldo_dia">Saldo de vendas do dia:</div>
+                <div id="div_saldo">R$ 4500.00</div>
+        </div> -->
+</body>
+
+</html>
+
+<script>
+    var v_produto = []
+    var v_pagamento = []
+    var v_valor = []
+
+    function mostrarVendas() {
+        document.getElementById('caixa_vendas').style.display = 'flex';
+        document.getElementById('caixa_saldo_dia').style.display = 'none';
+        document.getElementById('caixa_principal').style.backgroundColor = 'white';
+        document.getElementById('caixa_principal').style.borderColor = 'white';
+    }
+
+    function mostrarSaldo() {
+        document.getElementById('caixa_vendas').style.display = 'none';
+        document.getElementById('caixa_saldo_dia').style.display = 'flex';
+        document.getElementById('caixa_principal').style.backgroundColor = 'black';
+        document.getElementById('caixa_principal').style.borderColor = 'black';
+    }
+
+    function cadastro() {
+        var produto = inp_produto.value;
+        var pagamento = inp_pagamento.value;
+        var valor = inp_valor.value;
+
+        div_vendas.innerHTML = "";
+
+        v_produto.push(produto);
+        v_pagamento.push(pagamento);
+        v_valor.push(valor);
+
+        for (var count = 0; count < v_pagamento.length; count++) {
+            div_vendas.innerHTML += `
+            <div class="compra">
+                <span>Total Líquido: R$ ${v_valor[count].toFixed(2)}</span>
+                <span>${v_pagamento[count]}</span>
+                <span id="span_produtos">${v_produto}</span>
+            </div>
+            `;
+        }
+
+
+
+    }
+
+
+</script>
