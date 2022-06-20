@@ -233,7 +233,7 @@ html {
 .compra {
     width: 98.9vw;
     height: 100vh;
-    background: url(..z/assets/foto_compra.svg) no-repeat;
+    background: url(../assets/foto_compra.svg) no-repeat;
 }
 
 .titulo_compra {

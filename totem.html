@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/totem.css">
+    <link rel="stylesheet" href="css/totem.css">
     <title>Totem</title>
 </head>
 
 <body style="display: flex; flex-direction: row;">
     <div class="main" id="main2">
         <div class="metricsTotem">
-            <img style="margin-top: 1%;" src="/assets/logo.svg" alt="">
+            <img style="margin-top: 1%;" src="assets/logo.svg" alt="">
 
             <div class="columnMetrics">
                 <h4 style="color: #FBBC30;">8</h4>
@@ -32,22 +32,22 @@
 
         <div class="mainCard">
             <div class="card" onclick="productPao()" id="cards">
-                <img src="/assets/paoFrances.svg" style="margin-bottom: 16%;" alt="">
+                <img src="assets/paoFrances.svg" style="margin-bottom: 16%;" alt="">
                 <h4 style="color: #000;">Pães</h4>
             </div>
 
             <div class="card" onclick="productLeite()" id="cards2">
-                <img src="/assets/leite.svg" alt="">
+                <img src="assets/leite.svg" alt="">
                 <h4 style="color: #000;">Bebidas</h4>
             </div>
 
             <div class="card" onclick="productSalgado()" id="cards3">
-                <img src="/assets/coxinha.svg" style="margin-bottom: 8%;" alt="">
+                <img src="assets/coxinha.svg" style="margin-bottom: 8%;" alt="">
                 <h4 style="color: #000;">Salgados</h4>
             </div>
 
             <div class="card" onclick="productBolo()" id="cards4">
-                <img src="/assets/boloChocolate.svg" style="margin-bottom: 22%;" alt="">
+                <img src="assets/boloChocolate.svg" style="margin-bottom: 22%;" alt="">
                 <h4 style="color: #000;">Bolos</h4>
             </div>
         </div>
@@ -56,7 +56,7 @@
 
         <div class="rowProducts">
             <div class="products" id="paoProducts">
-                <img id="imgProducts" src="/assets/paoFrances.svg" alt="">
+                <img id="imgProducts" src="assets/paoFrances.svg" alt="">
                 <h4 id="subtitleProduct" style="color: #000; margin-bottom: 4%;"></h4>
                 <div class="lineRow">
                     <h5 id="descProduct"></h5>
@@ -72,7 +72,7 @@
             </div>
 
             <div class="products" id="paoProducts2">
-                <img id="imgProducts2" src="/assets/paoForma.svg" alt="">
+                <img id="imgProducts2" src="assets/paoForma.svg" alt="">
                 <h4 id="subtitleProduct2" style="color: #000; margin-bottom: 4%;"></h4>
                 <div class="lineRow">
                     <h5 id="descProduct3"></h5>
@@ -147,17 +147,17 @@
     <div class="container header" style="display: none;" id="container">
         <div class="header">
             <div id="header_parte1">
-                <img src="/assets/logo.svg" alt="logoPadaria" width="200px">
+                <img src="assets/logo.svg" alt="logoPadaria" width="200px">
                 <a id="btn_voltar" onclick="btnVoltar()">Voltar</a>
             </div>
 
             <div class="consultas">
                 <button id="btn_vendas" class="btn" onclick="mostrarVendas()">
-                    <img src="/assets/favicon/moedas.png">
+                    <img src="assets/favicon/moedas.png">
                     <span>Vendas</span>
                 </button>
                 <button id="btn_saldo_dia" class="btn" onclick="mostrarSaldo()">
-                    <img src="/assets/favicon/bolsa_moeda.png">
+                    <img src="assets/favicon/bolsa_moeda.png">
                     <span>Saldo do dia</span>
                 </button>
             </div>
@@ -215,8 +215,8 @@
         titleProduct.style.display = 'flex'
         paoProducts.style.display = 'flex'
         paoProducts2.style.display = 'flex'
-        imgProducts.src = `/assets/paoFrances.svg`
-        imgProducts2.src = `/assets/paoForma.svg`
+        imgProducts.src = `assets/paoFrances.svg`
+        imgProducts2.src = `assets/paoForma.svg`
         subtitleProduct.innerHTML = 'Pão francês'
         subtitleProduct2.innerHTML = 'Pão de forma'
         descProduct.innerHTML = `310 calorias`
@@ -235,8 +235,8 @@
         paoProducts.style.display = 'flex'
         paoProducts2.style.display = 'flex'
         titleProduct.innerHTML = `Bebidas`
-        imgProducts.src = `/assets/cafe.svg`
-        imgProducts2.src = `/assets/leite.svg`
+        imgProducts.src = `assets/cafe.svg`
+        imgProducts2.src = `assets/leite.svg`
         subtitleProduct.innerHTML = 'Café'
         subtitleProduct2.innerHTML = 'Leite'
         descProduct.innerHTML = '120 Calorias'
@@ -255,8 +255,8 @@
         paoProducts.style.display = 'flex'
         paoProducts2.style.display = 'flex'
         titleProduct.innerHTML = `Salgados`
-        imgProducts.src = `/assets/coxinha.svg`
-        imgProducts2.src = `/assets/paoQueijo.svg`
+        imgProducts.src = `assets/coxinha.svg`
+        imgProducts2.src = `assets/paoQueijo.svg`
         subtitleProduct.innerHTML = 'Coxinha'
         subtitleProduct2.innerHTML = 'Pão de queijo'
         descProduct.innerHTML = `600 calorias`
@@ -275,8 +275,8 @@
         paoProducts.style.display = 'flex'
         paoProducts2.style.display = 'flex'
         titleProduct.innerHTML = `Bolos`
-        imgProducts.src = `/assets/boloChocolate.svg`
-        imgProducts2.src = `/assets/boloMorango.svg`
+        imgProducts.src = `assets/boloChocolate.svg`
+        imgProducts2.src = `assets/boloMorango.svg`
         subtitleProduct.innerHTML = 'Bolo de Chocolate'
         subtitleProduct2.innerHTML = 'Bolo de Morango'
         descProduct.innerHTML = '900 Calorias'

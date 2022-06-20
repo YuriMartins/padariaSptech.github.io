@@ -32,7 +32,7 @@ section {
 .massa {
     display: flex;
     justify-content: center;
-    
+    cursor: pointer;
     height: 72vh;
     background: url('../assets/imagem-fundo.jpg') no-repeat;
     background-size: 100vw;
